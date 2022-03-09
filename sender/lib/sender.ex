@@ -3,10 +3,12 @@ defmodule Sender do
     raise "Oops, #{email} not sent"
   end
 
+  def send_email("konnichiwa@world.com"), do: :error
+
   def send_email(email) do
     Process.sleep(3000)
     IO.puts("Email to #{email} sent")
-    {:ok, "email sent"}
+    {:ok, "email_sent"}
   end
 
   def notify_all(emails) do
